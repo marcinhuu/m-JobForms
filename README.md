@@ -10,6 +10,7 @@
 - Job forms for infinity jobs
 - Multiple locations
 - Discord webhooks
+- Compatible with dpemotes or rpemotes
 
 
 # <strong>Preview qb-input</strong>
