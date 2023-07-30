@@ -4,6 +4,9 @@ elseif Config.Framework == "esx" then
     ESX = exports.es_extended:getSharedObject()
 end
 
+local PoliceWebhook = ""
+local AmbulanceWebhook = ""
+
 RegisterServerEvent('m-JobForms:Server:ApplyPoliceForm')
 AddEventHandler('m-JobForms:Server:ApplyPoliceForm', function(name, age, number, aboutyou, weapons, emergencyjob)
     PoliceFormWebhook (
@@ -61,7 +64,7 @@ function PoliceFormWebhook(message)
             },
         }
     }
-    PerformHttpRequest(Config.Webhooks.police, 
+    PerformHttpRequest(PoliceWebhook, 
     function(err, text, headers) end, 'POST', json.encode({username = 'm-JobForms - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
@@ -78,7 +81,7 @@ function AmbulanceFormWebhook(message)
             },
         }
     }
-    PerformHttpRequest(Config.Webhooks.ambulance, 
+    PerformHttpRequest(AmbulanceWebhook, 
     function(err, text, headers) end, 'POST', json.encode({username = 'm-JobForms - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
