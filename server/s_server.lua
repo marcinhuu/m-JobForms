@@ -32,9 +32,6 @@ AddEventHandler('m-JobForms:Server:ApplyAmbulanceForm', function(name, age, numb
         "**Player Name:** " .. name ..
         "\n" ..
         "\n" ..
-        "**Player Job:** " .. Player.PlayerData.job.name ..
-        "\n" ..
-        "\n" ..
         "**Player Age:** " .. age ..
         "\n" ..
         "\n" ..
