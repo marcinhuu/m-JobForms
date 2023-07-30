@@ -45,6 +45,7 @@ CreateThread(function()
                 exports['qb-core']:DrawText('[E] - Form', 'right')
             elseif Config.Framework == "esx" then
                 lib.showTextUI('[E] - Form')
+            end
         end
 
         if not showMarker then Wait(500) end
