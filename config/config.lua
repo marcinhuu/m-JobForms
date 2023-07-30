@@ -4,7 +4,7 @@ Config.Framework = "qb" -- "qb" or "esx"
 Config.Menus = "qb" -- "qb" or "ox" | If you use esx use Config.Menus = "ox"
 Config.Emotes = "rpemotes" -- "rpemotes" or "dpemotes"
 Config.Animation = "notepad" -- Animation when you are writing the form
-Config.Webhook = "https://discord.com/api/webhooks/1118197972765790311/Nr6Ux1msLoEZ4LsILH1C7ZuqsPLOE-JZS8oKfPnBmNMGeT120ogsXV5t4dwbUqcY_f-v"
+Config.Webhook = "YOUR_WEBHOOK"
 Config.SendEmail = true -- Send email to player?
 Config.Phone = "qb-phone" -- qb-phone / qs-smartphone / gksphone / rodaphone / d-phone / renewed-phone / notify - if you dont use any phone
 Config.Time = 5000 -- Time of progressbar when you are writing the form
