@@ -12,10 +12,14 @@
 - Discord webhooks
 
 
-# <strong>QBCore</strong>
+# <strong>Preview qb-input</strong>
 
 ![box](https://media.discordapp.net/attachments/1049749773185470537/1135296886027329566/image.png)
 
-# <strong>ESX</strong>
+# <strong>Preview ox_lib</strong>
 
 ![box](https://media.discordapp.net/attachments/1049749773185470537/1135297166529806376/image.png)
+
+# <strong>Preview webhook</strong>
+
+![box](https://media.discordapp.net/attachments/1049749773185470537/1135297400353861692/image.png)
