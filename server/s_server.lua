@@ -6,7 +6,7 @@ end
 
 RegisterServerEvent('m-JobForms:Server:ApplyPoliceForm')
 AddEventHandler('m-JobForms:Server:ApplyPoliceForm', function(name, age, number, aboutyou, weapons, emergencyjob)
-    JobFormsWebhook (
+    PoliceFormWebhook (
         "**Player Name:** " .. name ..
         "\n" ..
         "\n" ..
@@ -28,7 +28,7 @@ end)
 
 RegisterServerEvent('m-JobForms:Server:ApplyAmbulanceForm')
 AddEventHandler('m-JobForms:Server:ApplyAmbulanceForm', function(name, age, number, aboutyou, weapons, emergencyjob)
-    JobFormsWebhook (
+    AmbulanceFormWebhook (
         "**Player Name:** " .. name ..
         "\n" ..
         "\n" ..
@@ -48,12 +48,12 @@ AddEventHandler('m-JobForms:Server:ApplyAmbulanceForm', function(name, age, numb
         )
 end)
 
-function JobFormsWebhook(message)
+function PoliceFormWebhook(message)
     local embed = {}
     embed = {
         {
             ["color"] = 65280, -- GREEN = 65280 --- RED = 16711680
-            ["title"] = "m-JobForms | Logs",
+            ["title"] = "m-JobForms - Police | Logs",
             ["description"] = "" .. message ..  "",
             ["footer"] = {
                 ["icon_url"] = "https://media.discordapp.net/attachments/1049749773185470537/1135266178688876595/avatar.png",
@@ -61,7 +61,24 @@ function JobFormsWebhook(message)
             },
         }
     }
-    PerformHttpRequest(Config.Webhook, 
+    PerformHttpRequest(Config.Webhooks.police, 
+    function(err, text, headers) end, 'POST', json.encode({username = 'm-JobForms - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
+end
+
+function AmbulanceFormWebhook(message)
+    local embed = {}
+    embed = {
+        {
+            ["color"] = 65280, -- GREEN = 65280 --- RED = 16711680
+            ["title"] = "m-JobForms - Ambulance | Logs",
+            ["description"] = "" .. message ..  "",
+            ["footer"] = {
+                ["icon_url"] = "https://media.discordapp.net/attachments/1049749773185470537/1135266178688876595/avatar.png",
+                ["text"] = 'm-JobForms | Logs | Created By marcinhu',
+            },
+        }
+    }
+    PerformHttpRequest(Config.Webhooks.ambulance, 
     function(err, text, headers) end, 'POST', json.encode({username = 'm-JobForms - Logs', embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
