@@ -34,10 +34,17 @@ CreateThread(function()
         
         if not inZone and shown then
             shown = false
-            exports['qb-core']:HideText()
+            if Config.Framework == "qb" then
+                exports['qb-core']:HideText()
+            elseif Config.Framework == "esx" then
+                lib.hideTextUI()
+            end
         elseif inZone and not shown then
             shown = true
-            exports['qb-core']:DrawText('[E] - Form', 'right')
+            if Config.Framework == "qb" then
+                exports['qb-core']:DrawText('[E] - Form', 'right')
+            elseif Config.Framework == "esx" then
+                lib.showTextUI('[E] - Form')
         end
 
         if not showMarker then Wait(500) end
