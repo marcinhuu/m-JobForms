@@ -1,4 +1,4 @@
-# m-JobForms script for QB-Core
+# m-JobForms script for QB-Core & ESX
 
 | If you are intested in recieving updates join the community on **[Discord](https://discord.gg/marcinhu)**! |
 
